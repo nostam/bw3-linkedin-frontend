@@ -50,7 +50,7 @@ export default class SignUp extends Component {
     this.setState({ hidden: !this.state.hidden });
   };
   render() {
-    const { hidden, user } = thi.state;
+    const { hidden, user } = this.state;
     return (
       <div className="signupDiv">
         <Container className="d-flex flex-column justify-content-center align-content-center">
@@ -94,8 +94,8 @@ export default class SignUp extends Component {
                 </Form.Group>
               </Form>
               <span>
-                By clicking Agree & Join, you agree to the LinkedIn{" "}
-                <a>User Agreement</a>, <a>Privacy Policy</a>, and{" "}
+                By clicking Agree & Join, you agree to the LinkedIn
+                <a>User Agreement</a>, <a>Privacy Policy</a>, and
                 <a>Cookie Policy</a>.
               </span>
               <Col className="signupCol px-0">

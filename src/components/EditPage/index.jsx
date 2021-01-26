@@ -35,7 +35,7 @@ class EditPage extends React.Component {
   onChangeHandler = (e) => {
     this.setState({
       profile: {
-        ...profile,
+        ...this.state.profile,
         [e.target.id]: e.currentTarget.value,
       },
     });
@@ -46,7 +46,7 @@ class EditPage extends React.Component {
     try {
       const response = await fetch(url, {
         method: "PUT",
-        body: JSON.stringify(profile),
+        body: JSON.stringify(this.state.profile),
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -64,7 +64,8 @@ class EditPage extends React.Component {
     }
   };
   handleCloseModal = async () => {
-    (await JSON.stringify(this.props.profile)) !== JSON.stringify(profile)
+    (await JSON.stringify(this.props.profile)) !==
+    JSON.stringify(this.state.profile)
       ? this.setState({ confirmDialog: true })
       : this.setState({ showModal: false });
   };
@@ -80,7 +81,7 @@ class EditPage extends React.Component {
     fd.append("profile", this.state.selectedFile);
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${profile._id}/picture`,
+        `https://striveschool-api.herokuapp.com/api/profile/${this.state.profile._id}/picture`,
         {
           method: "POST",
           headers: { Authorization: "Bearer " + localStorage.getItem("token") },

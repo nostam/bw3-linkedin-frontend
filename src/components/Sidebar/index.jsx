@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import vid1 from "../../assets/vid1.png";
@@ -78,7 +78,7 @@ class Sidebar extends Component {
           <h5 className="lrn-h5">Add new skills with these courses</h5>
           <div className="row no-gutters">
             <div className="col-md-4">
-              <img className="vid-img" src={vid1}></img>
+              <img className="vid-img" alt="" src={vid1}></img>
             </div>
             <div className="col-md-8">
               <h4 className="vid-txt">
@@ -87,7 +87,7 @@ class Sidebar extends Component {
               <small className="vid-sml">3,895</small>
             </div>
             <div className="col-md-4">
-              <img className="vid-img" src={vid2}></img>
+              <img className="vid-img" alt="" src={vid2}></img>
             </div>
             <div className="col-md-8">
               <h4 className="vid-txt">
@@ -96,7 +96,7 @@ class Sidebar extends Component {
               <small className="vid-sml">4,985</small>
             </div>
             <div className="col-md-4">
-              <img className="vid-img" src={vid3}></img>
+              <img className="vid-img" alt="" src={vid3}></img>
             </div>
             <div className="col-md-8">
               <h4 className="vid-txt">

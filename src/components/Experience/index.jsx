@@ -144,6 +144,7 @@ class Experience extends React.Component {
                                   src={
                                     experience.image ? experience.image : Job
                                   }
+                                  alt=""
                                   style={{ width: "48px" }}
                                 />
                               </div>

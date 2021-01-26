@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
 import EditPage from "../EditPage";
 import "../../pages/Profile/styles.css";
 import { Route } from "react-router-dom";
