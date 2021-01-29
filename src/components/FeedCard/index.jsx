@@ -37,7 +37,7 @@ export default class FeedCard extends Component {
       const res = await fetch(method === "POST" ? url : delUrl, {
         method: method,
         headers: { "Content-Type": "application/json" },
-        
+        body: JSON.stringify(this.state.payload),
       });
       if (res.ok) {
         console.log("ok");
@@ -58,7 +58,7 @@ export default class FeedCard extends Component {
     const res = await fetch(method === "POST" ? liked : dislike, {
       method: method,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(this.state.payload),
+    
     });
     if (res.ok) {
       console.log("ok");
