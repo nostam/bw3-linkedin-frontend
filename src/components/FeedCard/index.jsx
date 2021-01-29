@@ -42,6 +42,7 @@ export default class FeedCard extends Component {
       if (res.ok) {
         console.log("ok");
         this.props.refetch();
+
       }
     } catch (error) {
       console.log(error);
@@ -51,7 +52,11 @@ export default class FeedCard extends Component {
     try{
       if(method==="POST"){
         const likeMe = true
+       
         this.setState({liked:likeMe})
+      }else{
+        const unlike= false
+        this.setState({liked:unlike})
       }
     const liked =`${process.env.REACT_APP_API_URL}/posts/${this.props.post._id}/${this.props.meId}/like` 
     const dislike = `${process.env.REACT_APP_API_URL}/posts/${this.props.post._id}/${id}`
