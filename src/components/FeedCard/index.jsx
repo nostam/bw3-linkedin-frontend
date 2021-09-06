@@ -86,7 +86,7 @@ export default class FeedCard extends Component {
     const { showComment, payload } = this.state;
     return (
       <div>
-        <Card className="w-100 my-2 feedCard" key={`feed${post._id}`}>
+      { Object.keys(post).length > 0 && <Card className="w-100 my-2 feedCard" key={`feed${post._id}`}>
           <Card.Header className="d-flex justify-content-between px-3">
             <Row className="ml-1">
               <Image
@@ -197,7 +197,7 @@ export default class FeedCard extends Component {
               </div>
             )}
           </Card.Footer>
-        </Card>
+        </Card> }
       </div>
     );
   }
