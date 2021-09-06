@@ -90,7 +90,7 @@ export default class FeedCard extends Component {
           <Card.Header className="d-flex justify-content-between px-3">
             <Row className="ml-1">
               <Image
-                src={post.user.image}
+                src={post.user?.image}
                 className="feedcardAvatar mr-3 align-self-center"
                 roundedCircle
               />
